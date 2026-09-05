@@ -1,0 +1,16 @@
+ResumeProof replay
+==================
+
+idempotent workflow: completed
+    1  2026-09-05 15:51:14  created
+    2  2026-09-05 15:51:14  approved
+    3  2026-09-05 15:51:14  attempt_started
+    4  2026-09-05 15:51:14  recovery_detected
+    5  2026-09-05 15:51:14  acknowledged
+
+non_idempotent workflow: unknown
+    6  2026-09-05 15:51:14  created
+    7  2026-09-05 15:51:14  approved
+    8  2026-09-05 15:51:14  attempt_started
+    9  2026-09-05 15:51:14  recovery_detected
+   10  2026-09-05 15:51:14  reconciliation_required

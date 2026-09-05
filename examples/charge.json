@@ -1,0 +1,6 @@
+{
+  "operation": "charge",
+  "account": "acct_fixture",
+  "amount_cents": 1250,
+  "currency": "USD"
+}

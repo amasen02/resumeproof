@@ -1,0 +1,105 @@
+{
+  "demo": "resumeproof-v0.1",
+  "idempotent": {
+    "crash_exit_code": 86,
+    "effect_count_after_repeated_resume": 1,
+    "receipt_replayed": true,
+    "same_receipt_on_repeated_resume": true,
+    "status": "completed",
+    "timeline": [
+      {
+        "detail": {
+          "action_digest": "784540affe5544d739f6449be9423f48d315badafc70f50c1dbdf20b6b01a34e"
+        },
+        "event": "created",
+        "occurred_at": "2026-09-05 15:51:14",
+        "sequence": 1
+      },
+      {
+        "detail": {
+          "action_digest": "784540affe5544d739f6449be9423f48d315badafc70f50c1dbdf20b6b01a34e",
+          "actor": "demo-reviewer"
+        },
+        "event": "approved",
+        "occurred_at": "2026-09-05 15:51:14",
+        "sequence": 2
+      },
+      {
+        "detail": {
+          "attempt": 1
+        },
+        "event": "attempt_started",
+        "occurred_at": "2026-09-05 15:51:14",
+        "sequence": 3
+      },
+      {
+        "detail": {
+          "tool_mode": "idempotent"
+        },
+        "event": "recovery_detected",
+        "occurred_at": "2026-09-05 15:51:14",
+        "sequence": 4
+      },
+      {
+        "detail": {
+          "receipt_id": "d58af1a5-2894-4416-890d-f5a30f522d63",
+          "replayed": true
+        },
+        "event": "acknowledged",
+        "occurred_at": "2026-09-05 15:51:14",
+        "sequence": 5
+      }
+    ],
+    "workflow_id": "84a2ae5c-5655-47de-bb64-8e50df3318df"
+  },
+  "non_idempotent": {
+    "crash_exit_code": 86,
+    "status": "unknown",
+    "timeline": [
+      {
+        "detail": {
+          "action_digest": "784540affe5544d739f6449be9423f48d315badafc70f50c1dbdf20b6b01a34e"
+        },
+        "event": "created",
+        "occurred_at": "2026-09-05 15:51:14",
+        "sequence": 6
+      },
+      {
+        "detail": {
+          "action_digest": "784540affe5544d739f6449be9423f48d315badafc70f50c1dbdf20b6b01a34e",
+          "actor": "demo-reviewer"
+        },
+        "event": "approved",
+        "occurred_at": "2026-09-05 15:51:14",
+        "sequence": 7
+      },
+      {
+        "detail": {
+          "attempt": 1
+        },
+        "event": "attempt_started",
+        "occurred_at": "2026-09-05 15:51:14",
+        "sequence": 8
+      },
+      {
+        "detail": {
+          "tool_mode": "non_idempotent"
+        },
+        "event": "recovery_detected",
+        "occurred_at": "2026-09-05 15:51:14",
+        "sequence": 9
+      },
+      {
+        "detail": {
+          "reason": "prior process stopped during a non-idempotent call; outcome is unknown"
+        },
+        "event": "reconciliation_required",
+        "occurred_at": "2026-09-05 15:51:14",
+        "sequence": 10
+      }
+    ],
+    "workflow_id": "07133e5f-6348-4813-a182-303f7b10d652"
+  },
+  "simulated_only": true,
+  "total_simulated_effects": 2
+}

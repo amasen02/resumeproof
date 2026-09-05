@@ -1,0 +1,1 @@
+Crash after effect, before ack: `resumeproof` replays one idempotent receipt; non-idempotent recovery becomes `unknown`. SQLite ledgers, digest approval, lock. `.venv\Scripts\resumeproof demo --output-dir demo-output`: https://github.com/amasen02/resumeproof

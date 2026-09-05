@@ -1,0 +1,21 @@
+ResumeProof v0.1 local verification
+Date: 2026-09-05
+Platform: Windows, Python 3.12.9
+
+COMMAND: .venv\Scripts\python.exe -m pytest
+OUTCOME: 17 passed in 6.75s
+
+COMMAND: .venv\Scripts\python.exe -m compileall -q src
+OUTCOME: exit 0
+
+COMMAND: .venv\Scripts\resumeproof.exe demo --output-dir demo-output
+OUTCOME: exit 0; child crash exit codes 86; idempotent effect count 1 after repeated resume; non-idempotent status unknown; 2 total simulated effects
+
+COMMAND: .venv\Scripts\python.exe -m pip wheel --no-deps --wheel-dir dist .
+OUTCOME: exit 0; resumeproof-0.1.0-py3-none-any.whl built; SHA-256 78c98eac84806ff44c6b7c8a83fd6455b05d6879a2b63f2487bf143a6c616cc9
+
+COMMAND: standalone create -> approve -> resume -> timeline using examples/charge.json
+OUTCOME: exit 0; readable timeline contained created, approved, attempt_started, acknowledged
+
+COMMAND: docker build -t resumeproof:0.1.0 .
+OUTCOME: not run; Docker CLI unavailable on this machine

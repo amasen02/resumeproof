@@ -1,0 +1,5 @@
+{
+  "title": "Kill a workflow between the effect and its acknowledgement",
+  "tags": ["ai", "python", "testing", "reliability"],
+  "series": "Agent failures you can reproduce"
+}
